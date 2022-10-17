@@ -1,0 +1,6 @@
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}"> <!-- ngClass is a structural directive, allows to dynamically add or remove css -->
+>{{'Server'}} with ID {{ serverId }} is {{ 
+    getServerStatus() }}
+</p> <!--serverId and serverStatus are properties of the class--> 
+<!-- ngStyle allows you to dynamically update the style -->
