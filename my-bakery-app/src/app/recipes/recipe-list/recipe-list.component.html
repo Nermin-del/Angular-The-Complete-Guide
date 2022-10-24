@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix" 
+        *ngFor="let recipe of recipes"> <!-- *ngFor allows us to repeat code in our template -->
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{ recipe.name }}</h4> <!-- {{}} is a property binding -->
+                <p class="list-group-item-text">{{ recipe.description }}</p>
+            </div>
+            <span class="pull-right">
+                <img 
+                [src]="recipe.imagePath" 
+                alt="{{ recipe.name }}" 
+                class="img-responsive" 
+                style="max-height: 50px;"> <!-- Path: src\assets\img\recipe.jpg -->
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-item> <!-- This is the component we want to create -->
+    </div>
+</div>
+
+<!-- you can also type  src="{{ recipe.imagePath}}"  to get to src img-->
