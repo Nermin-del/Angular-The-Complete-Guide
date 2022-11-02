@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+    <!-- <div class="panel-heading">{{ element.name }}</div> -->
+    <!-- This is the property binding -->
+    <div class="panel-heading" #heading>{{ name }}</div>
+    <!-- This is the property binding to @Input() name: string; server-element.component.ts -->
+    <div class="panel-body">
+        <!-- ng-content is a placeholder for the content of the element, ng-content is a directive.it works as a hook -->
+        <ng-content></ng-content>
+
+    </div>
+</div>
